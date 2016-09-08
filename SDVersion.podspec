@@ -8,10 +8,10 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SDVersion"
-  s.version      = "2.5.2"
+  s.version      = "3.4"
   s.summary      = "Objective-C library for detecting running device model and screen size."
   s.homepage     = "https://github.com/sebyddd/SDVersion"
-  s.screenshots  = "https://dl.dropboxusercontent.com/s/5ddx58dsex25x57/sdversion-logo.png?dl=0"
+  s.screenshots  = "https://dl.dropboxusercontent.com/s/bmfjwfe2ngnivwn/sdversion.png?dl=0"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -23,13 +23,19 @@ Pod::Spec.new do |s|
 
   s.license      = "MIT (example)"
   s.license      = { :type => "MIT", :file => "LICENSE" }
-  s.author       = { "Sebastian Dobrincu" => "sebyddd@gmail.com" }
+  s.author       = { "Sebastian Dobrincu" => "me@dobrincu.co" }
   s.platform     = :ios
   s.platform     = :osx
+  s.platform     = :watchos
+  s.platform     = :tvos
   s.ios.deployment_target = '7.0'
   s.osx.deployment_target = '10.9'
+  s.watchos.deployment_target = '2.0'
+  s.tvos.deployment_target = '9.0'
   s.ios.source_files = "SDVersion/SDiOSVersion/*.{h,m}"
   s.osx.source_files = "SDVersion/SDMacVersion/*.{h,m}"
+  s.watchos.source_files = "SDVersion/SDwatchOSVersion/*.{h,m}"
+  s.tvos.source_files = "SDVersion/SDtvOSVersion/*.{h,m}"
   s.source       = { :git => 'https://github.com/sebyddd/SDVersion.git', :tag => "#{s.version}" }
   s.source_files  = "SDVersion/*.{h,m}"
 
